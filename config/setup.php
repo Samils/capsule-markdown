@@ -33,8 +33,6 @@
 namespace Sammy\Packs\Samils\Capsule\MarkDown {
   use php\module;
 
-  require '/vendor/php_modules/php-module/autoload';
-
   module::config ('rootDir', dirname(__DIR__));
 
   module::initialize_config ();

@@ -58,8 +58,15 @@ namespace Sammy\Packs\CapsuleMarkDown {
    * -
    */
   class Commands {
+    /**
+     * @method void setup
+     */
     public static function setup () {
-      require dirname(dirname(dirname(__DIR__))) . '/config/setup.php';
+      $autoloadFile = dirname (dirname (dirname (__DIR__))) . '/vendor/autoload.php';
+
+      if (is_file ($autoloadFile)) {
+        require ($autoloadFile);
+      }
     }
 
     /**

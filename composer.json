@@ -1,7 +1,7 @@
 {
 	"name": "php_modules/capsule-markdown",
 	"version": "1.0.0",
-	"description": "markdown Parser for capsule gogue plugin",
+	"description": "markdown capsule components set",
   "type": "library",
 	"license": "MIT",
   "minimum-stability": "dev",
@@ -31,6 +31,11 @@
 			"autoload.php"
 		]
 	},
+  "autoload-dev": {
+    "files": [
+      "config/setup.php"
+    ]
+  },
   "scripts": {
     "dev": [
       "Sammy\\Packs\\CapsuleMarkDown\\Commands::dev"
@@ -52,13 +57,13 @@
     "wiki": "https://github.com/samils/capsule-markdown/wiki"
   },
 	"require": {
-		"php": ">=5.6.20"
+		"php": ">=5.6.20",
+		"php_modules/include-all": "dev-main"
 	},
   "require-dev": {
     "php_modules/core": "dev-main",
     "php_modules/capsule": "dev-main",
     "php_modules/xsami": "dev-main",
-    "samils/callable-object": "dev-main",
     "php_modules/gogue": "dev-main",
     "php_modules/gogue-plugin-capsule": "dev-main",
     "php_modules/gogue-plugin-capsule-css-parser": "dev-main",

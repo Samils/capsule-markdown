@@ -31,6 +31,7 @@
  * SOFTWARE.
  */
 namespace Sammy\Packs\Samils\Capsule {
+  use Sammy\Packs\Path;
   /**
    * Make sure the module base internal class is not
    * declared in the php global scope before creating
@@ -57,5 +58,33 @@ namespace Sammy\Packs\Samils\Capsule {
    * -
    */
   class MarkDown {
+    /**
+     * @method array
+     */
+    public static function getComponentSet () {
+      $path = new Path;
+
+      $componentsPath = $path->join ('@HOME', 'src', 'components', 'dist');
+
+      if (!is_dir ($componentsPath)) {
+        return [];
+      }
+
+      $re = join (DIRECTORY_SEPARATOR, [$componentsPath, '*']);
+
+      $componentsDirFileList = glob ($re);
+
+      $componentsFileList = [];
+
+      foreach ($componentsDirFileList as $file) {
+        $fileExtension = strtolower (pathinfo ($file, PATHINFO_EXTENSION));
+
+        if (in_array ($fileExtension, ['php'])) {
+          array_push ($componentsFileList, $file);
+        }
+      }
+
+      return $componentsFileList;
+    }
   }}
 }
