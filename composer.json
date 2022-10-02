@@ -1,0 +1,71 @@
+{
+	"name": "php_modules/capsule-markdown",
+	"version": "1.0.0",
+	"description": "markdown Parser for capsule gogue plugin",
+  "type": "library",
+	"license": "MIT",
+  "minimum-stability": "dev",
+	"keywords": [
+		"gogue",
+		"plugin",
+		"capsule",
+		"markdown-parser",
+		"capsule-markdown",
+		"gogue-plugin",
+		"capsule-markdown-parser",
+		"gogue-plugin-parser",
+		"gogue-plugin-capsule",
+		"capsule-markdown"
+	],
+	"autoload": {
+		"psr-4": {
+			"Sammy\\": "Sammy/"
+		},
+		"psr-0": {
+			"Sammy\\": "Sammy/"
+		},
+		"classmap": [
+			"src/"
+		],
+		"files": [
+			"autoload.php"
+		]
+	},
+  "scripts": {
+    "dev": [
+      "Sammy\\Packs\\CapsuleMarkDown\\Commands::dev"
+    ]
+  },
+  "homepage": "https://github.com/samils/capsule-markdown",
+  "readme": "./README.md",
+  "authors": [
+    {
+      "name": "Agostinho Lopes",
+      "email": "agostinhosaml832@gmail.com",
+      "homepage": "https://agostinhosamil.github.io",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "base.samils@gmail.com",
+    "issues": "https://github.com/samils/capsule-markdown/issues",
+    "wiki": "https://github.com/samils/capsule-markdown/wiki"
+  },
+	"require": {
+		"php": ">=5.6.20"
+	},
+  "require-dev": {
+    "php_modules/core": "dev-main",
+    "php_modules/capsule": "dev-main",
+    "php_modules/xsami": "dev-main",
+    "samils/callable-object": "dev-main",
+    "php_modules/gogue": "dev-main",
+    "php_modules/gogue-plugin-capsule": "dev-main",
+    "php_modules/gogue-plugin-capsule-css-parser": "dev-main",
+    "php_modules/capsule-css-file-dependency-watcher": "dev-main",
+    "php_modules/command-line-interface": "dev-main"
+  },
+  "suggest": {
+    "php_modules/core": ""
+  }
+}
