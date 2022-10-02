@@ -57,8 +57,7 @@
     "wiki": "https://github.com/samils/capsule-markdown/wiki"
   },
 	"require": {
-		"php": ">=5.6.20",
-		"php_modules/include-all": "dev-main"
+		"php": ">=5.6.20"
 	},
   "require-dev": {
     "php_modules/core": "dev-main",
