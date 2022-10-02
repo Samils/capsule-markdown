@@ -1,0 +1,36 @@
+{
+  "watch": [
+    "~/src/components"
+  ],
+
+  "watch.exclude": [
+  ],
+
+  "dir.map": {},
+
+  "dir.watcher": [],
+
+  "file.watcher": [
+    "xsami-file-watcher",
+    {
+      "resolve": "capsule-css-file-dependency-watcher",
+      "options": {
+        "extensions": ["css", "ccss"],
+        "defaultFileProps": {
+          "dependencies": []
+        }
+      }
+    },
+    {
+      "resolve": "capsule/watcher",
+      "options": {
+        "extensions": ["php", "cap"]
+      }
+    }
+  ],
+
+  "map": {
+    "cap": "gogue --respawn --minify=False",
+    "css": "gogue:ccss:compile --respawn --minify=False"
+  }
+}
